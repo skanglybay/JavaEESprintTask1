@@ -45,7 +45,15 @@
             </td>
             <td><%=item.getDeadlineDate()%>
             </td>
-            <td><%=item.isStatus()%>
+            <td><%
+                    if (item.isStatus()==false){
+                %>
+                Да
+                <%
+                    }else {
+                %>
+                Нет
+                <%}%>
             </td>
             <td><button type="button" class="text-white bg-primary"><a href="/details?id=<%=item.getId()%>">Детали</a></button></td>
         </tr>
